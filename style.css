@@ -1,4 +1,25 @@
+/* -----------------------------------------  FONTS  ----------------------------------------- */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
+
+/* -----------------------------------------  :ROOT  ----------------------------------------- */
+
+:root {
+  --main-dark: #0E0E0E;
+  --main-color: #3E68FF;
+  --main-blue: #6688FF;
+  --seconde-color: #C9BB94;
+  --available-color: #37E391;
+  --unavailable-color: #E33737; 
+  --white-light: #EEF0F4;
+  --grey-dark: #222222;
+}
+
+
+
+/* -----------------------------------------  RESET CSS  ----------------------------------------- */
 
 * {
   margin: 0;
@@ -7,16 +28,47 @@
   font-family: "Poppins", sans-serif;
 }
 
+
+
+/* -----------------------------------------  BALISE  ----------------------------------------- */
+
 body {
+  background-color: var(--main-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* -----------------------------------------  PORTFOLIO PAGE  ----------------------------------------- */
+
+/* ---------------------------------  HEADER  --------------------------------- */
+
+
+/* -------------  Logo  -------------- */
+
+
+/* -------------  Navbar  -------------- */
+
+
+/* -------------  Available + Socials  -------------- */
+
+
+/* -----------------------------------------  FIRST PAGE  ----------------------------------------- */
+
+.body {
   display: flex;
   padding: 20px;
   flex-direction: column;
   min-height: 100vh;
-  background-color: black;
+  background-color: var(--main-dark);
   overflow: hidden;
 }
 
-header {
+.div-header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -25,7 +77,7 @@ header {
   width: 100%;
 }
 
-section {
+.div-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,14 +144,19 @@ section {
     0 0 1px rgba(3, 233, 244, 1),
 }
 
-h1 {
+.MyPortfolio-h1 {
   position: relative;
   font-size: 2rem;
   color: black;
+}
+
+.MyPortfolio-a {
+  color: var(--main-dark);
   -webkit-text-stroke: 1px #2e2e2e;
 }
 
-h1::before {
+
+.MyPortfolio-h1::before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -151,7 +208,7 @@ h1::before {
   }
 }
 
-.container .box .cube {
+.div-box-container .box .cube {
   position: relative;
   width: 200px;
   height: 200px;
