@@ -18,6 +18,19 @@
 }
 
 
+/* -----------------------------------------  CLASSES  ----------------------------------------- */
+
+.semi-bold-16 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.semi-Bold-12 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+
 
 /* -----------------------------------------  RESET CSS  ----------------------------------------- */
 
@@ -26,6 +39,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  color: white;
+  list-style: none;
 }
 
 
@@ -34,6 +49,7 @@
 
 body {
   background-color: var(--main-dark);
+  position: relative;
 }
 
 a {
@@ -46,16 +62,178 @@ a {
 /* -----------------------------------------  PORTFOLIO PAGE  ----------------------------------------- */
 
 /* ---------------------------------  HEADER  --------------------------------- */
+.bloc {
+  width: 100px;
+  height: 100px;
+  background-color: #03e9f4;
+}
 
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  gap: 20px;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 992px) {
+  .header {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 525px) {
+  .header {
+    flex-direction: column;
+  }
+}
 
 /* -------------  Logo  -------------- */
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.logo-content {
+  margin-left: 20px;
+}
+
+@media (max-width: 992px) {
+  .logo-content {
+    display: none;
+  }
+}
+@media (max-width: 525px) {
+  .logo-content {
+    display: block;
+  }
+}
+@media (max-width: 270px) {
+  .logo-content {
+    display: none;
+  }
+}
 
 /* -------------  Navbar  -------------- */
 
+.navbar {
+  background-color: var(--grey-dark);
+  border-radius: 50px;
+}
+
+ul {
+  display: flex;
+  padding: 2px 2px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li {
+  font-size: 1rem;
+  border-radius: 50px;
+  padding: 8px 20px;
+}
+
+@media (max-width: 525px) {
+  .navbar ul li {
+    font-size: 0.8rem;
+  }
+}
+
+.navbar ul li a {
+  white-space: nowrap;
+}
+
+.nav-home {
+  background-color: var(--main-dark);
+}
 
 /* -------------  Available + Socials  -------------- */
 
+.right-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.available {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 710px) {
+  .available {
+    display: none;
+  }
+}
+
+.pulse {
+  width: 28px;
+  height: 28px;
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.point {
+  width: 8px;
+  height: 8px;
+  border-radius: 20px;
+  flex-wrap: nowrap;
+  position: static;
+  border-radius: 50%;
+  background-color: var(--unavailable-color);
+}
+
+.point-animation {
+  width: 8px;
+  height: 8px;
+  background-color: var(--unavailable-color);
+  border-radius: 500px;
+  opacity: 0.5;
+  z-index: -1;
+  position: absolute; 
+  animation: point-anim 2s ease-in-out infinite;
+}
+@keyframes point-anim {
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.unavailable-text {
+  color: var(--unavailable-color);
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  .socials {
+    display: none;
+  }
+}
+
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.5px -0.5px 1px rgba(255, 255, 255, 0.15);
+}
 
 /* -----------------------------------------  FIRST PAGE  ----------------------------------------- */
 
@@ -182,13 +360,13 @@ a {
   }
 }
 
-.container {
+.div-box-container {
   position: relative;
   width: 100%;
   transform: rotate(-25deg);
 }
 
-.container .box {
+.div-box-container .box {
   position: relative;
   left: -200px;
   display: flex;
