@@ -20,6 +20,14 @@
 
 /* -----------------------------------------  CLASSES  ----------------------------------------- */
 
+.main-color {
+  color: var(--main-blue);
+}
+
+.second-color {
+  color: var(--seconde-color);
+}
+
 .semi-bold-16 {
   font-size: 1rem;
   font-weight: 600;
@@ -62,11 +70,6 @@ a {
 /* -----------------------------------------  PORTFOLIO PAGE  ----------------------------------------- */
 
 /* ---------------------------------  HEADER  --------------------------------- */
-.bloc {
-  width: 100px;
-  height: 100px;
-  background-color: #03e9f4;
-}
 
 .header {
   position: absolute;
@@ -136,7 +139,7 @@ ul {
 }
 
 .navbar ul li {
-  font-size: 1rem;
+  font-size: 0.9rem;
   border-radius: 50px;
   padding: 8px 20px;
 }
@@ -234,6 +237,86 @@ ul {
   align-items: center;
   box-shadow: 0.5px -0.5px 1px rgba(255, 255, 255, 0.15);
 }
+
+
+/* ---------------------------------  MAIN PAGE  --------------------------------- */
+
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.slide {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+
+/* -------------  Hero  -------------- */
+
+.container .hero h2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 80px;
+}
+
+.container .hero h2 .content-third-text{
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.container .hero h2 div p {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 16px;
+  max-width: 360px;
+}
+
+.container .hero h2 .first-text, .third-text{
+  margin-left: 6%;
+}
+
+
+.btn-scroll {
+  position: absolute;
+  bottom: calc(5%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+
+
+
+.slide-1 {
+  background-color: #03e9f4;
+}
+
+.slide-2 {
+  background-color: #03f43f;
+}
+
+.slide-3 {
+  background-color: #e8f403;
+}
+
+.slide-4 {
+  background-color: #f48803;
+}
+
 
 /* -----------------------------------------  FIRST PAGE  ----------------------------------------- */
 
@@ -408,3 +491,4 @@ ul {
     transform: rotate(90deg);
   }
 }
+
